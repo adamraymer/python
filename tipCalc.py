@@ -1,13 +1,14 @@
 class TipCalc1:
 
    def __init__(self):
-       key = 'Default'
-       rating = 3
+       self.key = 'Default'
+       self.rating = 3
+       self.billAmount = 0
        
    def percentVals(self):
        tipPerc = {'Default':.15}
 
-       key = input('What is the service?')
+       key = input('What is the service? ')
        
        return float(tipPerc.get(key) / 3)
 
@@ -22,12 +23,10 @@ class TipCalc1:
 
         return value   
        
-   def calculate(self):
-        print(float((self.percentVals() * self.getRating()) * self.getBillAmount()))
+   def calculate(self, percVal, rating, billAmount):
+        print(float((percVal * rating) * billAmount))
 
 
-#testing to see if this is okay
-tip1 = TipCalc1()
-tip1.calculate()
+
 
        
